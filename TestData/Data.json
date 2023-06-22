@@ -1,0 +1,24 @@
+[
+  {
+    "Browser": "Chrome",
+    "URL": "https://staging.damaskcakes.com/",
+    "email": "admam_smith_01@yopmail.com",
+    "Birthday": "12/27",
+    "fname": "Monica",
+    "lname": "Hayden",
+    "Address": "12, New Link Road",
+    "City": "New York",
+    "zip_code": "78945",
+    "Phone": "9876543210",
+    "Card_Number":"4111 1111 1111 1111",
+    "ExpDate": "12/30",
+    "CVV": "123",
+    "Username": "bishal.shah@webpoint.io",
+    "Password": "NicePassword@1900",
+    "NewPassword": "NicePassword@190",
+    "RepeatPassword": "NicePassword@190",
+    "FirstName": "Bishal",
+    "LastName": "Shah",
+    "Update_uname": "bishal.shah+1@webpoint.io"
+  }
+]
