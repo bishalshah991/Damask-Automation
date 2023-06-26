@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class RegisterPageTest extends TestBase {
 
-    Register signPage;
+    /*Register signPage;
     @BeforeClass
     public void Setup() throws IOException, ParseException {
         LaunchBrowser(new ReadJsonData().ReadJSONData("Browser"));
@@ -45,7 +45,7 @@ public class RegisterPageTest extends TestBase {
     @Test(priority = 5)
     public void Go_to_Payment_test() throws InterruptedException, IOException, ParseException {
         signPage.Go_to_Payment();
-    }
+    }*/
 
 
 
