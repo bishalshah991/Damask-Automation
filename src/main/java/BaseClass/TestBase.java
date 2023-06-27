@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import java.io.IOException;
 import java.util.Locale;
@@ -27,8 +28,12 @@ public class TestBase {
                 driver.manage().window().setSize(new Dimension(1440, 900));
                 break;
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                driver=new FirefoxDriver();
+                FirefoxOptions options1 = new FirefoxOptions();
+                WebDriver driver = new FirefoxDriver(options1);
+                options1.setHeadless(true);
+                driver=new FirefoxDriver(options1);
+                driver.manage().window().setSize(new Dimension(1440, 900));
+
                 break;
             case "safari":
                 driver=new SafariDriver();
@@ -38,8 +43,7 @@ public class TestBase {
             default:
                 driver=null;
                 break;
-        }
-        //driver.manage().window().maximize();
+        }driver.manage().window().maximize();
         driver.get(new ReadJsonData().ReadJSONData("URL"));
     }
 
