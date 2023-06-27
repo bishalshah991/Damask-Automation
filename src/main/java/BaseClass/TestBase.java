@@ -28,9 +28,9 @@ public class TestBase {
                 driver.manage().window().setSize(new Dimension(1440, 900));
                 break;
             case "firefox":
+                System.out.println("Application run on firefox");
                 FirefoxOptions options1 = new FirefoxOptions();
-                WebDriver driver = new FirefoxDriver(options1);
-                options1.setHeadless(true);
+                options1.addArguments("--headless");
                 driver=new FirefoxDriver(options1);
                 driver.manage().window().setSize(new Dimension(1440, 900));
 

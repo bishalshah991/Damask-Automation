@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="none">
     <test name="Delete Worker">
-        <parameter name="browserName" value="firefox"></parameter>
+        <!--parameter name="browserName" value="firefox"></parameter-->
         <parameter name="author" value="Bishal"></parameter>
 
         <classes>
