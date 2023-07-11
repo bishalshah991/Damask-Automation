@@ -12,28 +12,14 @@ import java.io.IOException;
 
 public class LoginPageTest extends TestBase {
 
-    LoginPage loginPage;
-
-    @BeforeClass
-    public void Setup() throws IOException, ParseException {
-        LaunchBrowser(new ReadJsonData().ReadJSONData("Browser"));
-        loginPage=new LoginPage(driver);
-    }
-    @Test(priority = 1)
-    public void Login_to_Application_test() throws IOException, ParseException {
+    @Test
+    public void Login_to_Application() throws IOException, ParseException, InterruptedException {
+        LoginPage loginPage=new LoginPage(driver);
         loginPage.Login_to_Application();
-    }
-    @Test(priority = 2)
-    public void Go_Account_tab_test(){
         loginPage.Go_to_Account_tab();
+        loginPage.Log_out_From_Application();
+
     }
 
-    @Test(priority = 3)
-    public void Log_out_From_Application() throws InterruptedException {
-        loginPage.Log_out_From_Application();
-    }
-    @AfterClass
-    public void Quit_Application(){
-        driver.quit();
-    }
+
 }

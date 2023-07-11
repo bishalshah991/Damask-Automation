@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="none">
-    <test name="Delete Worker">
-        <!--parameter name="browserName" value="firefox"></parameter-->
+<suite name="Suite">
+    <test name="Damask Test on Chrome">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="Url" value="https://staging.damaskcakes.com/"></parameter>
         <parameter name="author" value="Bishal"></parameter>
-
         <classes>
             <class name="TestCase.LoginPageTest"></class>
+            <class name="TestCase.RegisterPageTest"></class>
         </classes>
-
     </test>
 </suite>

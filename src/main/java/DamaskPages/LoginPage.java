@@ -34,6 +34,9 @@ public class LoginPage extends TestBase {
 
     @FindBy(xpath = "//div[contains(text(),'Login Successfully')]")
     WebElement Text_Login_Successfully;
+
+    @FindBy(xpath = "//h1[contains(text(),'We believe anyone can bake.')]")
+    WebElement Text_Login;
     @FindBy(xpath = "//a[contains(text(),'ACCOUNT')]")
     public WebElement Account;
 
@@ -54,12 +57,15 @@ public class LoginPage extends TestBase {
         Log_In_Button.click();
         waitHelper.Go_to_Wait_for_Element(Text_Login_Successfully);
         Assertion.Verify_the_an_Element(Text_Login_Successfully);
+        waitHelper.Go_to_Wait_for_Element(Text_Login);
+        Assertion.Verify_the_an_Element(Text_Login);
         waitHelper.Go_to_Wait_for_Element(Account);
     }
 
     public void Go_to_Account_tab(){
         Account.click();
         waitHelper.Go_to_Wait_for_Element(Logout);
+        Assertion.Verify_the_an_Element(Logout);
     }
 
     public void Log_out_From_Application() throws InterruptedException {
