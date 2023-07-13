@@ -45,7 +45,7 @@ public class ShopNow extends TestBase {
             }
             else {
                 System.out.println("Element is not Displayed");
-                new LoginPage(driver).Login_IN_tab.click();
+                //new LoginPage(driver).Login_IN_tab.click();
             }
         }
         catch (Exception e){

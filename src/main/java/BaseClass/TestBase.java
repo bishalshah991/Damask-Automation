@@ -79,8 +79,9 @@ public class TestBase {
         {
             case "chrome":
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--no-sandbox");
-                options.addArguments("--remote-allow-origins=*");
+                options.setHeadless(true);
+                options.addArguments("--headless");
+                options.addArguments("window-size=1400,800");
                 driver = new ChromeDriver(options);
                 break;
             case "firefox":
@@ -96,7 +97,7 @@ public class TestBase {
                 driver=null;
                 break;
         }
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.get(Url);
     }
 
