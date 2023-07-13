@@ -81,6 +81,7 @@ public class TestBase {
                 ChromeOptions options = new ChromeOptions();
                 options.setHeadless(true);
                 options.addArguments("--headless");
+                options.addArguments("--no-sandbox");
                 options.addArguments("window-size=1400,800");
                 driver = new ChromeDriver(options);
                 break;
