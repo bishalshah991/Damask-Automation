@@ -80,6 +80,7 @@ public class TestBase {
             case "chrome":
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--no-sandbox");
+                options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
                 break;
             case "firefox":
