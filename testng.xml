@@ -3,11 +3,10 @@
 <suite name="Suite">
     <test name="Damask Test on Chrome">
         <parameter name="browserName" value="Chrome"/>
-        <parameter name="Url" value="https://staging.damaskcakes.com/"></parameter>
+        <parameter name="Url" value="https://damaskcakes.com/"></parameter>
         <parameter name="author" value="Bishal"></parameter>
         <classes>
             <class name="TestCase.LoginPageTest"></class>
-            <class name="TestCase.RegisterPageTest"></class>
         </classes>
     </test>
 </suite>

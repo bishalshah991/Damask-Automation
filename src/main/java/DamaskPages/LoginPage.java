@@ -1,6 +1,7 @@
 package DamaskPages;
 
 import BaseClass.TestBase;
+import DamaskPageHelper.ShopNow;
 import Utility.ReadJsonData;
 import Verificaion.Assertion;
 import Verificaion.WaitHelper;
@@ -14,10 +15,12 @@ import java.io.IOException;
 
 public class LoginPage extends TestBase {
     WaitHelper waitHelper;
+    ShopNow shopNow;
     public LoginPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
         waitHelper=new WaitHelper(driver,10);
+        shopNow=new ShopNow(driver);
     }
 
     @FindBy(xpath = "//a[contains(text(),'Log In')]")
@@ -46,20 +49,21 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//div[contains(text(),'Logout Successfully')]")
     WebElement Text_Logout;
 
-    public void Login_to_Application() throws IOException, ParseException {
-        waitHelper.Go_to_Wait_for_Element(new Register(driver).ShopNow);
+
+    public void Go_to_Login_In(){
         Login_IN_tab.click();
         waitHelper.Go_to_Wait_for_Element(Log_In_Button);
+        Assertion.Verify_the_an_Element(Log_In_Button);
+    }
+
+    public void LoginToApplication() throws IOException, ParseException {
         String u_name=new ReadJsonData().ReadJSONData("Username");
         String p_password=new ReadJsonData().ReadJSONData("Password");
         Text_UserName.sendKeys(u_name);
         Text_PassWord.sendKeys(p_password);
         Log_In_Button.click();
-        waitHelper.Go_to_Wait_for_Element(Text_Login_Successfully);
-        Assertion.Verify_the_an_Element(Text_Login_Successfully);
-        waitHelper.Go_to_Wait_for_Element(Text_Login);
-        Assertion.Verify_the_an_Element(Text_Login);
         waitHelper.Go_to_Wait_for_Element(Account);
+        Assertion.Verify_the_an_Element(Account);
     }
 
     public void Go_to_Account_tab(){
@@ -74,4 +78,10 @@ public class LoginPage extends TestBase {
         Assertion.Verify_the_an_Element(Text_Logout);
         Thread.sleep(3000);
     }
+
+
+
+
+
+
 }

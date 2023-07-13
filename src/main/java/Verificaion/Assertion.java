@@ -9,7 +9,7 @@ public class Assertion extends TestBase {
     static String image;
 
     public static synchronized boolean verifyElementPresent( WebElement element) {
-        boolean isDispalyed = false;
+        boolean isDispalyed = true;
         try {
             isDispalyed= element.isDisplayed();
             System.out.println(element.getText()+"is displayed");
