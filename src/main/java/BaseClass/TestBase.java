@@ -78,8 +78,9 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--no-sandbox");
+                driver = new ChromeDriver(options);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
